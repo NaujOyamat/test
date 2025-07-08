@@ -12,6 +12,8 @@ jobs:
     name: Update Terraform version (dev only)
     if: github.ref == 'refs/heads/main' && !startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -76,6 +78,8 @@ jobs:
     name: Update Terraform version (both environments)
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
