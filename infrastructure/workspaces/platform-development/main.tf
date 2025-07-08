@@ -1,5 +1,5 @@
 locals {
-  app_version = "v1.3.2"
+  app_version = "v1.3.2 "
 }
 
 data "terraform_remote_state" "shared_services" {
